@@ -91,12 +91,11 @@ class GetAuthorBooks(APIView):
 
     def get(self, request):
         try:
-            author = Author.objects.get(email=request.user)
+            author = Author.objects.get(email=request.user.email)
         except Author.DoesNotExist:
             return Response({"message": "Author not found"}, status=status.HTTP_404_NOT_FOUND)
         try:
             books = Book.objects.filter(author=author)
-            print(books)
         except Book.DoesNotExist:
             return Response({"message": "Books not found"}, status=status.HTTP_404_NOT_FOUND)
         serializer = BookSerializer(books, many=True)
