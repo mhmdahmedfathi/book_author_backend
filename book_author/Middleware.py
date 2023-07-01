@@ -1,5 +1,5 @@
 from rest_framework import authentication
-from .exceptions import InvalidAuthToken, NoAuthToken
+from .exceptions import InvalidAuthToken
 from user.models import User
 from rest_framework.authtoken.models import Token
 
