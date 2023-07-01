@@ -40,15 +40,15 @@ This is a book about the author who can write books and readers who can read the
 
 ## Models 
 
-#### user (Base Class)
+- #### user (Base Class)
 
-- ##### author (Inherits from user)
+    - ##### author (Inherits from user)
 
-- ##### reader (Inherits from user)
+    - ##### reader (Inherits from user)
 
-#### book
+- #### book
 
-#### page 
+- #### page 
 
 
 
